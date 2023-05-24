@@ -1,0 +1,41 @@
+export default {
+    lang:{
+        language:{
+            currentLang:'简体中文',
+            simpleChinese:'简体中文',
+            englishUsa:'英语-美国',
+            language:'语言',
+            chooseLang:'语言选择',
+
+        },
+        sysTag:{
+            ok:'好的',
+            cancel:'取消',
+            confirm:'确定',
+            loading:"正在加载数据...",
+            submit:'立即提交',
+            nomore:"没有更多数据",
+            notice:"提示",
+            exit:'确定退出应用？'
+        },
+        comm:{
+            acc:'账号',
+            code:'密码',
+            login:'登录',
+            agr:'同意',
+            ref:'拒绝',
+            and:'和',
+            and1:'以及',
+            save:'保存',
+            open:'开启',
+            close:'关闭',
+            enter_content:'请输入内容',
+            title:'标题',
+        },
+        pages:{
+            tabbar:{
+               a1:"音标学习"
+            }
+        }
+    }
+};

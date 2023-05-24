@@ -1,0 +1,14 @@
+@import "../theme/default.scss";
+.border-bottom-line1{
+   border-bottom: .5px solid $uni-ddd;
+ }
+
+.border-bottom-line1-f5{
+  border-bottom: .5px solid $uni-f5;
+}
+
+.border-bottom-line1-light-primary{
+  border-bottom: 2px solid $uni-light-primary;
+}
+
+.dash-line1{border-bottom: 1rpx dashed $uni-eee;}

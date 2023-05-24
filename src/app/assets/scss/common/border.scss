@@ -1,0 +1,21 @@
+@import "../theme/default.scss";
+
+.border-8{border-radius: 8rpx}
+.border-15{border-radius: 15rpx}
+.border-20{border-radius: 20rpx !important;}
+.border-30{border-radius: 30rpx}
+.border-43{border-radius: 43rpx !important;}
+.border-80{border-radius: 80rpx !important;}
+.border-50{border-radius: 50% !important;}
+
+
+.border-f5-1{border: solid $uni-f5 1rpx}
+.border-ddd-1{border: solid $uni-ddd 1rpx}
+.border-dash-ddd-1{border: dashed $uni-ddd 1rpx}
+.border-eee-1{border: solid $uni-eee 1rpx}
+.border-primary-1{border: solid $uni-color-primary 1rpx}
+.border-primary-light-1{border: solid $uni-color-primary-light 1rpx}
+.border-origin-1{border: solid $uni-orange 1rpx}
+.border-none{border: none !important;}
+.border-radius-unset{border-radius: unset !important;}
+.border-error-1{border: solid $uni-color-error 1rpx;}

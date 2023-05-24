@@ -1,0 +1,113 @@
+@import "../theme/default.scss";
+
+.font-primary{color:$uni-color-primary !important;}
+.font-dark-primary{color:$uni-color-primary-dark}
+
+.font-fff{color:$uni-bg-color}
+
+.font-grey{color:$uni-bg-color-grey}
+
+.font-black{color:#000}
+
+.font-333{color:$uni-text-color}
+
+.font-444{color:#444444}
+
+.font-454{color: #454545}
+
+.font-eee{color:$uni-eee}
+
+.font-ddd{color:$uni-ddd}
+
+.font-666{color: $uni-666}
+
+.font-golden{color:$uni-golden}
+
+.font-444{color: $uni-444}
+
+.font-error{color: $uni-color-error;}
+
+.font-999{color: $uni-text-color-grey}
+
+.font-green{color: $uni-color-success}
+
+.font-link{color: $uni-color-link}
+
+.single-text {
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+
+
+
+.bold{font-weight: bold}
+.normal{font-weight: normal}
+
+.text-center{text-align: center}
+
+
+
+
+
+.line-height22{line-height: 22rpx}
+.line-height24{line-height: 24rpx}
+.line-height26{line-height: 26rpx}
+.line-height30{line-height: 30rpx}
+.line-height36{line-height: 36rpx}
+.line-height43{line-height: 40rpx}
+.line-height64{line-height: 64rpx}
+
+.text-del-line{text-decoration:line-through;}
+
+.font-overflow{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.font-wrap{
+  word-break:break-all;
+  width:auto;
+  display:block;
+  white-space:pre-wrap;
+  word-wrap : break-word ;
+  overflow: hidden ;
+
+}
+
+.font-pink{color:$uni-pink}
+
+.font-pink-dark{color:$uni-light-dark}
+
+.font-warning{color: $uni-color-warning;}
+
+.font-nowrap{white-space: nowrap;}
+
+
+
+.font-light-grey{color:#BDBEC6}
+
+.font-dark-blue{color:$uni-dark-bg-color}
+
+.font-hide{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
+.font-20{font-size: .4rem !important;}
+.font-22{font-size: .5rem !important;}
+.font-24{font-size: .6rem !important;}
+.font-26{font-size: .8rem !important;}
+.font-30{font-size: .9rem !important;}
+.font-32{font-size: 1rem !important;}
+.font-36{font-size: 1.2rem !important;}
+.font-40{font-size: 1.3rem !important;}
+.font-43{font-size: 1.4rem !important;}
+.font-52{font-size: 1.5rem !important;}
+.font-64{font-size: 1.7rem !important;}
+.font-72{font-size: 1.8rem !important;}
+

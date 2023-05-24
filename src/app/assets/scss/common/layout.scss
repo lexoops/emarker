@@ -1,0 +1,115 @@
+.position-relative{position: relative;}
+
+.pos-absolute{position: absolute;}
+.pos-fixed{position: fixed;}
+
+.overflow-hidden{overflow: hidden;}
+.flex{display: flex}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex1 {
+  display: flex;
+  flex: 1;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-wrap {flex-wrap: wrap;}
+.flex-nowrap {flex-wrap: nowrap;}
+
+.flex-column {
+  display: flex;
+  flex-direction: column !important;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.flex-end {
+  align-items: end;
+  justify-content: end;
+  display: flex;
+}
+
+.flex-align-start {align-items: start;}
+
+.flex-align-center {align-items: center;}
+
+.flex-align-end {align-items: flex-end;}
+
+.flex-just-start {justify-content: start;}
+
+.flex-just-center {justify-content: center;}
+
+.flex-just-end {justify-content: flex-end;}
+
+.space-between {justify-content: space-between;}
+
+.width-100{width: 100% !important;}
+
+.width-100vw{width: 100vw !important;}
+
+.height-100vh{width: 100vh !important;}
+
+.wh100{
+  width: 100%;
+  height: 100%;
+}
+
+.height-100{height: 100%}
+
+.height-auto{
+  height: auto;
+}
+
+.page-container {
+  width: 100vw;
+  height: 100vh ;
+    height: -webkit-calc(100vh - constant(safe-area-inset-bottom)) !important;
+
+}
+
+
+
+
+
+
+
+
+.scroll-y{overflow-y: scroll;}
+.scroll-x{overflow-x: scroll;}
+
+
+.full-parent {
+  height: 100%;
+  width: 100%;
+}
+
+.text-cut-1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.text-cut-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+
+::v-deep .u-form-item__body__right__content{width:  100%;}
+::v-deep .u-form-item__body__right__content__slot{width:  100%;}

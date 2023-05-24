@@ -1,0 +1,59 @@
+@import "../theme/default.scss";
+
+.bg-f5{background-color: $uni-f5 !important;}
+
+.bg-fff{background-color: $uni-bg-color !important;}
+
+.bg-link{background-color: $uni-color-link !important;}
+
+.bg-select{background-color: $uni-color-select !important;}
+
+.bg-golden{background:linear-gradient(to bottom,#F9DCAF,#F3CF94)}
+
+.bg-ddd{background-color: $uni-ddd}
+
+.bg-eee{background-color: $uni-eee}
+
+.bg-primary{background-color: $uni-color-primary !important;}
+
+.bg-primary-dark{background-color: $uni-color-primary-dark !important;}
+
+.bg-light-primary{background-color: $uni-light-primary}
+
+.bg-light-primary-dot{background-color: $uni-color-primary-dot5}
+
+.bg-trans-white{background: linear-gradient(to bottom,$uni-white,$uni-f5)}
+
+.bg-pink{background-color: $uni-pink}
+
+.bg-light-pink{background-color: $uni-red-light}
+
+.bg-333{background-color: $uni-text-color}
+.bg-black{background-color: #000}
+
+.bg-light-bk{background-color: $uni-light-bk}
+
+.bg-green{background:linear-gradient(to right, $uni-color-success, #4ed16e)}
+
+.bg-green1{background-color: #95EB6C;}
+
+.bg-high-red{background-color: $uni-color-error}
+.transparent{background-color: transparent}
+
+.bg-orange{background:linear-gradient(to right,#F0B68F,#FF6700);}
+.bg-orange-light{background-color: $uni-orange-light;}
+
+.bg-orange-liner{background: linear-gradient(to right,$uni-orange-light,$uni-orange-light,$uni-orange,$uni-orange)}
+
+.bg-primary-liner-bottom{background: linear-gradient(to bottom,$uni-color-primary-dot8,$uni-color-primary,$uni-color-primary-dark)}
+
+.bg-primary-liner{background: linear-gradient(to right,$uni-color-primary-dot8,$uni-color-primary)}
+
+
+.bg-transparent{background-color: transparent !important;}
+
+.bg-sliver{background: linear-gradient(to bottom, $uni-eee,$uni-f5,$uni-ddd);}
+
+.bg-light-white{background-color: rgb(255,255,255,.4)}
+
+.bg-opposites-f5{background-color: $uni-f5-opposites}

@@ -1,0 +1,39 @@
+
+// 隐藏滚动条
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+text {
+  font-family: "PingFang SC", serif;
+  white-space: pre-wrap;
+}
+
+.u-popup__content{
+  background-color: unset !important;
+}
+
+.u-navbar{
+ /* :first-child{
+    position: relative !important;
+  }*/
+}
+
+.u-skeleton__wrapper__content__rows{
+  width: 100% !important;
+  border: 15rpx;
+}
+
+.uni-date-select{
+  z-index: 20000;
+}
+
+.u-index-anchor{
+  height: 20px !important;
+}
+
+.u-index-anchor__text{font-size: 26rpx !important;}
+
+.u-cell-group__title__text span{font-size: 24rpx !important;}

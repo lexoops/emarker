@@ -1,0 +1,67 @@
+{
+	"pages": [{
+			"path": "app/pages/comm/splash/index",
+			"style": {
+				"navigationBarTitleText": "EmMarker~",
+				"bounce": "none"
+			}
+		}
+	],
+	"subPackages": [
+		{
+			"root": "app/pages/tabbar",
+			"pages": [
+				{
+					"path": "index/index"
+				}
+			]
+		},
+		{
+			"root": "app/pages/detail",
+			"pages": [
+				{
+					"path": "pick/index"
+				}
+			]
+		},
+		{
+			"root": "app/pages/other",
+			"pages": [
+				{
+					"path": "donate/index"
+				},
+				{
+					"path": "suggestion/index"
+				}
+			]
+		},
+		{
+			"root": "app/pages/study",
+			"pages": [
+				{
+					"path": "be/index"
+				},
+				{
+					"path": "person/index"
+				}
+			]
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"navigationStyle": "custom",
+		"usingComponents": {},
+		"app-plus": {
+			"bounce": "none"
+		}
+	},
+	"easycom": {
+		"autoScan": true,
+		"custom": {
+			"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+		}
+	}
+}

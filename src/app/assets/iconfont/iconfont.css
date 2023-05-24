@@ -1,0 +1,99 @@
+/* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+  font-family: 'iconfont';  /* Project id 3805075 */
+  src: url('https://at.alicdn.com/t/c/font_3805075_ugsn0c0g89l.eot?t=1676623338913'); /* IE9 */
+  src: url('https://at.alicdn.com/t/c/font_3805075_ugsn0c0g89l.eot?t=1676623338913#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('https://at.alicdn.com/t/c/font_3805075_ugsn0c0g89l.woff2?t=1676623338913') format('woff2'),
+  url('https://at.alicdn.com/t/c/font_3805075_ugsn0c0g89l.woff?t=1676623338913') format('woff'),
+  url('https://at.alicdn.com/t/c/font_3805075_ugsn0c0g89l.ttf?t=1676623338913') format('truetype'),
+  url('https://at.alicdn.com/t/c/font_3805075_ugsn0c0g89l.svg?t=1676623338913#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-shanchu:before {
+  content: "\e74b";
+}
+
+.icon-banbenshengji:before {
+  content: "\e633";
+}
+
+.icon-yonghuxieyi:before {
+  content: "\e657";
+}
+
+.icon-tongzhi:before {
+  content: "\e667";
+}
+
+.icon-huancunjiankong:before {
+  content: "\e637";
+}
+
+.icon-yuyan:before {
+  content: "\e640";
+}
+
+.icon-a-yuyanzhongwen:before {
+  content: "\e641";
+}
+
+.icon-a-yuyanyingwen:before {
+  content: "\e642";
+}
+
+.icon-choose:before {
+  content: "\e61d";
+}
+
+.icon-choose1:before {
+  content: "\e653";
+}
+
+.icon-saoyisao-copy:before {
+  content: "\e916";
+}
+
+.icon-tianjiayonghutianchong:before {
+  content: "\e697";
+}
+
+.icon-xinxifill:before {
+  content: "\e762";
+}
+
+.icon-yuyin:before {
+  content: "\e66c";
+}
+
+.icon-erweima:before {
+  content: "\e65f";
+}
+
+.icon-shejishi:before {
+  content: "\e600";
+}
+
+.icon-tianjiahaoyou:before {
+  content: "\e618";
+}
+
+.icon-xinxi:before {
+  content: "\e61b";
+}
+
+.icon-qunxinxi:before {
+  content: "\e652";
+}
+
+.icon-a-xinxiyuyinxinxitishixinxi-08:before {
+  content: "\e915";
+}
+
