@@ -12,7 +12,11 @@
 			"root": "app/pages/tabbar",
 			"pages": [
 				{
-					"path": "index/index"
+					"path": "index/index",
+					"enablePullDownRefresh":false,
+					"app-plus":{
+						"bounce":"none"
+					}
 				}
 			]
 		},

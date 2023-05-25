@@ -5,31 +5,42 @@
                 :style="`height: 100vh !important;width:100%`"
                 class="wh100 flex1 deep">
             <swiper-item class="overflow-hidden mark-container flex-column table-container"
-                         v-for="(item,index) in cards"
-                         :key="item.name">
-                <view class="flex-row deep border-bottom-line1-light-primary bg-light-primary">
-                    <view class="flex1 table-content space-between flex-row">
-                        <view class="flex-center flex1 flex-row voice-tag" @click="()=>{play(item,index)}">
-                            <text class="font-fff font-52">{{item.name}}</text>
-                            <view :class="`vp-bg audio-icon-in ${item.play?'voice-play':''}`"/>
+                         v-for="(item,index) in cards.length /2"
+                         :key="item">
+                <lex-top-holder>
+                    <template>
+                        <view class="flex-row deep border-bottom-line1-light-primary bg-light-primary width-100vw">
+                            <view class="flex1 table-content space-between flex-row flex-align-center">
+                                <view class="flex-center flex1 flex-row voice-tag" v-if="getCurrentItem(index)">
+                                    <view style="min-width: 80rpx" class="flex-center min-86"
+                                          @click="()=>$easyUni.uniNavigate.getBack()">
+                                        <u-icon name="arrow-left" color="#fff" size="36"/>
+                                    </view>
+                                    <view class="flex1 flex-row flex-align-center flex-center"
+                                          @click="()=>{play(getCurrentItem(index),getCurrentIndex(index))}">
+                                        <text class="font-fff font-52">{{getCurrentItem(index).name}}</text>
+                                        <view :class="`vp-bg audio-icon-in ${getCurrentItem(index).play?'voice-play':''}`"/>
+                                    </view>
+                                </view>
+                                <view class="flex-center flex1 flex-row voice-tag" v-if="cards[getCurrentIndex(index) +1]"
+                                      @click="()=>{play(cards[getCurrentIndex(index) +1],getCurrentIndex(index) +1)}">
+                                    <text class="font-fff font-52">{{cards[getCurrentIndex(index) +1].name}}</text>
+                                    <view :class="`vp-bg audio-icon-in ${cards[getCurrentIndex(index) +1].play?'voice-play':''}`"/>
+                                </view>
+                            </view>
                         </view>
-                        <view class="flex-center flex1 flex-row voice-tag" v-if="$easyCode.IsNotEmpty(cards[index +1])"
-                              @click="()=>{play(cards[index +1],index +1)}">
-                            <text class="font-fff font-52">{{cards[index +1].name}}</text>
-                            <view :class="`vp-bg audio-icon-in ${cards[index +1].play?'voice-play':''}`"/>
-                        </view>
-                    </view>
-                </view>
+                    </template>
+                </lex-top-holder>
                 <view class="flex-column scroll-y">
                     <view class="flex-row deep">
                         <text class="table-header flex-center font-fff">类型</text>
                         <view class="flex1 table-content flex-row space-between flex-align-center">
                             <view class="flex1  mar-right5">
-                                <text class="font-green font-26 flex-wrap flex-just-start">{{item.type}}</text>
+                                <text class="font-green font-26 flex-wrap flex-just-start">{{getCurrentItem(index).type}}</text>
                             </view>
                             <view class="flex1 mar-right5">
                                 <text class="font-green font-26 flex-wrap flex-just-start"
-                                      v-if="$easyCode.IsNotEmpty(cards[index +1])">{{cards[index +1].type}}</text>
+                                      v-if="$easyCode.IsNotEmpty(cards[getCurrentIndex(index) +1])">{{cards[getCurrentIndex(index) +1].type}}</text>
                             </view>
                         </view>
                     </view>
@@ -37,11 +48,11 @@
                         <text class="table-header flex-center font-fff">舌位</text>
                         <view class="flex1 table-content flex-row space-between flex-align-start">
                             <view class="flex1 mar-right5">
-                                <text class="font-green font-26 flex-wrap flex-center">{{item.mouth}}</text>
+                                <text class="font-green font-26 flex-wrap flex-center">{{getCurrentItem(index).mouth}}</text>
                             </view>
                             <view class="flex1 mar-right5">
                                 <text class="font-green font-26 flex-wrap flex-center"
-                                      v-if="$easyCode.IsNotEmpty(cards[index +1])">{{cards[index +1].mouth}}</text>
+                                      v-if="$easyCode.IsNotEmpty(cards[getCurrentIndex(index) +1])">{{cards[getCurrentIndex(index) +1].mouth}}</text>
                             </view>
                         </view>
                     </view>
@@ -49,11 +60,11 @@
                         <text class="table-header flex-center font-fff">唇形</text>
                         <view class="flex1 table-content flex-row space-between">
                             <view class="flex1 mar-right5">
-                                <text class="font-green font-26 flex-wrap flex-center">{{item.shape}}</text>
+                                <text class="font-green font-26 flex-wrap flex-center">{{getCurrentItem(index).shape}}</text>
                             </view>
                             <view class="flex1 mar-right5">
                                 <text class="font-green font-26 flex-wrap flex-center"
-                                      v-if="$easyCode.IsNotEmpty(cards[index +1])">{{cards[index +1].shape}}</text>
+                                      v-if="$easyCode.IsNotEmpty(cards[getCurrentIndex(index) +1])">{{cards[getCurrentIndex(index) +1].shape}}</text>
                             </view>
                         </view>
                     </view>
@@ -61,11 +72,11 @@
                         <text class="table-header flex-center font-fff">声带</text>
                         <view class="flex1 table-content flex-row space-between">
                             <view class="flex1 mar-right5">
-                                <text class="font-green font-26 flex-wrap flex-center">{{item.vocalCord}}</text>
+                                <text class="font-green font-26 flex-wrap flex-center">{{getCurrentItem(index).vocalCord}}</text>
                             </view>
                             <view class="flex1 mar-right5">
                                 <text class="font-green font-26 flex-wrap flex-center"
-                                      v-if="$easyCode.IsNotEmpty(cards[index +1])">{{cards[index +1].vocalCord}}</text>
+                                      v-if="$easyCode.IsNotEmpty(cards[getCurrentIndex(index) +1])">{{cards[getCurrentIndex(index) +1].vocalCord}}</text>
                             </view>
                         </view>
                     </view>
@@ -73,11 +84,11 @@
                         <text class="table-header flex-center font-fff">口型图</text>
                         <view class="flex1 table-content flex-row space-between">
                             <view class="flex1 mar-right5">
-                                <image :src="item.img" style="width: 290rpx;height: 290rpx;"/>
+                                <image :src="getCurrentItem(index).img" style="width: 290rpx;height: 290rpx;"/>
                             </view>
                             <view class="flex1 mar-right5"
-                                  v-if="$easyCode.IsNotEmpty(cards[index +1])">
-                                <image :src="cards[index +1].img" style="width: 290rpx;height: 290rpx;"/>
+                                  v-if="$easyCode.IsNotEmpty(cards[getCurrentIndex(index) +1])">
+                                <image :src="cards[getCurrentIndex(index) +1].img" style="width: 290rpx;height: 290rpx;"/>
                             </view>
                         </view>
                     </view>
@@ -85,11 +96,11 @@
                         <text class="table-header flex-center font-fff">技巧</text>
                         <view class="flex1 table-content flex-row space-between flex-align-start">
                             <view class="flex1 mar-right5">
-                                <text class="font-green font-26 flex-wrap flex-center">{{item.skill}}</text>
+                                <text class="font-green font-26 flex-wrap flex-center">{{getCurrentItem(index).skill}}</text>
                             </view>
                             <view class="flex1 mar-right5">
                                 <text class="font-green font-26 flex-wrap flex-center"
-                                      v-if="$easyCode.IsNotEmpty(cards[index +1])">{{cards[index +1].skill}}</text>
+                                      v-if="$easyCode.IsNotEmpty(cards[getCurrentIndex(index) +1])">{{cards[getCurrentIndex(index) +1].skill}}</text>
                             </view>
                         </view>
                     </view>
@@ -102,8 +113,10 @@
 <script>
     import AudioServer from "../../../components/uniAudio/audioServer";
     import {CardPics} from "../../../assets/marks";
+    import lexTopHolder from '../../../components/lexTopHolder/index.vue';
     export default {
         name: "index",
+        components:{lexTopHolder},
         data(){
             return {
                 cards:CardPics,
@@ -144,6 +157,20 @@
                 this.$forceUpdate();
                 this.audioServices.setUrl(item.sound);
                 this.audioServices.play();
+            },
+            getCurrentItem(index){
+                index =index >0?index *2:0;
+                if (index >this.cards.length){
+                    return null;
+                }
+                return this.cards[index];
+            },
+            getCurrentIndex(index){
+                index =index >0?index*2:0;
+                if (index >this.cards.length){
+                    return null;
+                }
+                return index;
             }
         }
     }

@@ -5,7 +5,7 @@
                 <view class="width-100vw">
                     <view class="flex-row flex-align-center pad-LR20 min-86">
                         <view class="flex-row flex-align-center" @click="()=>{showMenu =true;}">
-                            <view style="margin-top: 2rpx">
+                            <view style="margin-top: 5rpx">
                                 <u-icon name="list-dot" size="43" color="#fff"/>
                             </view>
                             <text class="text-center font-36 bold font-green">EMarker</text>

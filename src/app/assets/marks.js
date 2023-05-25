@@ -848,6 +848,7 @@ export const beVerbs ={
         level:"原形",
         markE:"/biː; bi/",
         markM:"/biː; bi/",
+        key:0,
         means:{
             aux:{
                 content:[
@@ -932,6 +933,7 @@ export const beVerbs ={
         level:"be 的第一人称单数现在时",
         markE:"/æm; əm/",
         markM:"/æm; əm/",
+        key:1,
         means:{
             v:{
                 content:["是"],
@@ -954,6 +956,7 @@ export const beVerbs ={
         level:"be 的第三人称单数",
         markE:"/ɪz/",
         markM:"/ɪz/",
+        key:2,
         means:{
             v:{
                 content:["是"],
@@ -971,16 +974,39 @@ export const beVerbs ={
     },
 
     are:{
-        name:"is",
+        name:"are",
         type:"v",
         level:"be 的第二人称单复数现在式",
         markE:"/ɑː(r); ə(r)/",
         markM:"/ɑːr; ər/",
+        key:3,
         means:{
             v:{
                 content:["是"],
                 example:["you are a boy."],
                 explain:["你是个男孩"]
+            }
+        },
+        links:[
+            {
+                name:"be",
+                link:"be",
+                title:"原形"
+            },
+        ]
+    },
+    art:{
+        name:"art",
+        type:"v",
+        level:"（古代）be 的第二人称单数现在式",
+        markE:"/ɑːt",
+        markM:"/ɑːrt/",
+        key:4,
+        means:{
+            v:{
+                content:["是"],
+                example:["thou art loosed."],
+                explain:["你被释放了"]
             }
         },
         links:[
@@ -998,6 +1024,7 @@ export const beVerbs ={
         level:"过去分词",
         markE:"/biːn/",
         markM:"/bɪn/",
+        key:5,
         means:{
             v:{
                 content:["是，有（be的过去分词），被，已"],
@@ -1020,6 +1047,7 @@ export const beVerbs ={
         level:"现在分词",
         markE:"/ˈbiːɪŋ/",
         markM:"/ˈbiːɪŋ/",
+        key:6,
         means:{
             v:{
                 content:["是，有（be的现在分词），被，已"],
@@ -1042,6 +1070,7 @@ export const beVerbs ={
         level:"am、is 的过去式",
         markE:"/wɒz; wəz/",
         markM:"/wʌz; wəz/",
+        key:7,
         means:{
             v:{
                 content:["是；在；要"],
@@ -1069,6 +1098,7 @@ export const beVerbs ={
         level:"are的过去式",
         markE:"/wɜː(r); wə(r)/",
         markM:"/wɜːr; wər/",
+        key:8,
         means:{
             v:{
                 content:["是；在；要；（are 的过去式）"],
@@ -1177,6 +1207,14 @@ export const possessives ={
         desc:"第二人称单/复数",
         pos:"主格/宾格",
         derived:{
+            thou:{
+                name:"thou",
+                means:"你；尔，汝",
+                markE:"/ðaʊ/",
+                markM:"/ðaʊ/",
+                type:"pron",
+                pos:"主格",
+            },
             your:{
                 name:"your",
                 means:"你的/你们的",

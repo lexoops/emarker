@@ -21,7 +21,7 @@
                 </template>
             </lexTabar>
         </view>-->
-        <view class="talk-container flex1 flex-column">
+<!--        <view class="talk-container flex1 flex-column">
             <swiper :current="currentTab"
                     @change="({detail})=>{currentTab =detail.current;}"
                     :style="`height: 100vh !important;width:100%`"
@@ -30,7 +30,8 @@
                     <home class="flex1"/>
                 </swiper-item>
             </swiper>
-        </view>
+        </view>-->
+        <home class="flex1"/>
     </view>
 </template>
 
