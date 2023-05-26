@@ -1,5 +1,4 @@
 import {EasyCode} from "../../utils/lexUtil/comm/EasyCode";
-import AudioEventFlags from "../../config/Eventflags";
 import {createInnerAudioContext} from "./index";
 
 export default class AudioServer {
@@ -47,44 +46,31 @@ export default class AudioServer {
         this.audioIns._events.onPause =[()=>{AudioServer.onPause()}];
         this.audioIns._events.onStop =[()=>{AudioServer.onStop()}];
         this.audioIns._events.onEnded =[()=>{AudioServer.onEnded()}];
-        this.audioIns._events.onTimeUpdate=[(time)=>{
-            AudioServer.onTimeUpdate(this.audioIns.currentTime);
-        }];
+        this.audioIns._events.onTimeUpdate=[(time)=>{AudioServer.onTimeUpdate(this.audioIns.currentTime);}];
         //#endif
 
         //#ifndef H5
-        this.audioIns._callbacks.onPlay =[()=>{AudioServer.onPlay();}];
-        this.audioIns._callbacks.onPause =[()=>{AudioServer.onPause()}];
-        this.audioIns._callbacks.onStop =[()=>{AudioServer.onStop()}];
-        this.audioIns._callbacks.onEnded =[()=>{AudioServer.onEnded()}];
-        this.audioIns._callbacks.timeupdate=[(time)=>{
-            AudioServer.onTimeUpdate(this.audioIns.currentTime);
-        }];
+        this.audioIns._callbacks.play =[()=>{AudioServer.onPlay();}];
+        this.audioIns._callbacks.pause =[()=>{AudioServer.onPause()}];
+        this.audioIns._callbacks.stop =[()=>{AudioServer.onStop()}];
+        this.audioIns._callbacks.ended =[()=>{AudioServer.onEnded()}];
+        this.audioIns._callbacks.timeupdate=[(time)=>{AudioServer.onTimeUpdate(this.audioIns.currentTime);}];
         //#endif
 
     }
 
     play(){
         this.isPlaying =true;
- /*       uni.$emit(AudioEventFlags.play_music,{
-            show:true
-        });*/
         this.audioIns.play();
     }
 
     stop(){
         this.isPlaying =false;
-     /*   uni.$emit(AudioEventFlags.play_music,{
-            show:false
-        });*/
         this.audioIns.stop();
     }
 
     pause(){
         this.isPlaying =false;
-     /*   uni.$emit(AudioEventFlags.play_music,{
-            show:false
-        });*/
         this.audioIns.pause();
     }
 
@@ -100,9 +86,6 @@ export default class AudioServer {
     }
 
     destroy(){
-/*        uni.$emit(AudioEventFlags.play_music,{
-            show:false
-        });*/
         this.audioIns.stop();
         this.audioIns.destroy();
         AudioServer.serverIns =null;

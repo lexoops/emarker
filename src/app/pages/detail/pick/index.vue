@@ -127,10 +127,12 @@
         onLoad(){
             this.audioServices =AudioServer.getIns();
             AudioServer.onStop =()=>{
+                console.info("ddddddddd")
                 this.cards[this.currentPlay].play =false;
                 this.$forceUpdate();
             };
             AudioServer.onEnded =()=>{
+                console.info("ddddddddd")
                 this.cards[this.currentPlay].play =false;
                 this.$forceUpdate();
             };
