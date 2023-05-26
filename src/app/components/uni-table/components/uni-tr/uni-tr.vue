@@ -123,7 +123,7 @@ export default {
 </script>
 
 <style lang="scss">
-$border-color: #ebeef5;
+	$border-color:#508184;
 
 .uni-table-tr {
 	/* #ifndef APP-NVUE */

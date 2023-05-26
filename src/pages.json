@@ -47,6 +47,9 @@
 				},
 				{
 					"path": "person/index"
+				},
+				{
+					"path": "posIntro/index"
 				}
 			]
 		}

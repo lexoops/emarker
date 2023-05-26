@@ -19,6 +19,8 @@ import lexPopView from './app/components/lexPopView/index.vue';
 import skeletonView from './app/components/skeletonView/index.vue';
 import ItemContainer from './app/moudules/itemContainer/index.vue';
 import UniTable from './app/components/uni-table/components/uni-table/uni-table.vue';
+import uniTd from './app/components/uni-table/components/uni-td/uni-td.vue';
+import uniTr from './app/components/uni-table/components/uni-tr/uni-tr.vue';
 import Networking from "./app/net/request";
 import './app/assets/iconfont/iconfont.css';
 import {EasyCode} from "./app/utils/lexUtil/comm/EasyCode";
@@ -62,6 +64,8 @@ Vue.component('webPage',webpage);
 Vue.component('lexButton',lexButton);
 Vue.component('ItemContainer',ItemContainer);
 Vue.component('UniTable',UniTable);
+Vue.component('uniTd',uniTd);
+Vue.component('uniTr',uniTr);
 
 
 //字体大小设置，需要在每个页面顶部注册

@@ -90,10 +90,10 @@ export default {
 			if (this.theadChildren) {
 				rowspan = this.theadChildren.rowspan
 			}
-			
+
 			// this.trChildren.length - rowspan
 			this.noData = false
-			// this.noData = newVal.length === 0 
+			// this.noData = newVal.length === 0
 		}
 	},
 	created() {
@@ -247,9 +247,9 @@ export default {
 			if (!this.theadChildren) {
 				theadChildren = this.trChildren[0]
 			}
-			
-			
-			
+
+
+
 			let childDomIndex = this.trChildren.findIndex((item, index) => child === item)
 			if(childDomIndex < 0){
 				childDomIndex = this.data.findIndex(v=>v[this.rowKey] === keyValue) + 1
@@ -301,7 +301,7 @@ export default {
 </script>
 
 <style lang="scss">
-$border-color: #ebeef5;
+	$border-color:#508184;
 
 .uni-table-scroll {
 	width: 100%;
@@ -315,21 +315,21 @@ $border-color: #ebeef5;
 	width: 100%;
 	border-radius: 5px;
 	// box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
-	background-color: #fff;
+	background-color: transparent;
 	/* #ifndef APP-NVUE */
 	box-sizing: border-box;
 	display: table;
 	overflow-x: auto;
 	::v-deep .uni-table-tr:nth-child(n + 2) {
 		&:hover {
-			background-color: #f5f7fa;
+			background-color: #397072;
 		}
 	}
 	::v-deep .uni-table-thead {
 		.uni-table-tr {
 			// background-color: #f5f7fa;
 			&:hover {
-				background-color:#fafafa;
+				background-color:#397072;
 			}
 		}
 	}
@@ -337,7 +337,7 @@ $border-color: #ebeef5;
 }
 
 .table--border {
-	border: 1px $border-color solid;
+	border: 1px $border-color solid !important;
 	border-right: none;
 }
 

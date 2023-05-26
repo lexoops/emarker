@@ -76,7 +76,7 @@
                                    :show-bottom-line="false"
                                    bg-color="#31696A"
                                    use-cust-icon
-                                   @click="()=>{$easyUni.uniNavigate.navigateTo('/app/pages/study/person/index')}">
+                                   @click="()=>{$easyUni.uniNavigate.navigateTo('/app/pages/study/posIntro/index')}">
                         <template #custIcon>
                             <text class="font-fff bold">I</text>
                         </template>

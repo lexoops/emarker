@@ -864,8 +864,7 @@ export const beVerbs ={
                 ],
                 example:[
                     {
-                        text:"是",
-                        example:[
+                        sentences:[
                             "Intelligence cannot be overvalued.",
                             "She must be crazy to lend him money.",
                         ],
@@ -875,8 +874,7 @@ export const beVerbs ={
                         ]
                     },
                     {
-                        text:"有",
-                        example:[
+                        sentences:[
                             "It's going to be wet tomorrow.",
                             "There may be other worlds out there.",
                         ],
@@ -886,8 +884,7 @@ export const beVerbs ={
                         ]
                     },
                     {
-                        text:"做",
-                        example:[
+                        sentences:[
                             "I want you to be who you want to be.",
                             "I'm going to be a good boy now.",
                         ],
@@ -937,8 +934,12 @@ export const beVerbs ={
         means:{
             v:{
                 content:["是"],
-                example:["i am a boy."],
-                explain:["我是个男孩"]
+                example:[
+                    {
+                        sentences:["i am a boy."],
+                        explain:["我是个男孩"]
+                    }
+                ],
             }
         },
         links:[
@@ -960,8 +961,12 @@ export const beVerbs ={
         means:{
             v:{
                 content:["是"],
-                example:["he is a boy."],
-                explain:["他是个男孩"]
+                example:[
+                    {
+                        sentences:["he is a boy."],
+                        explain:["他是个男孩"]
+                    }
+                ],
             }
         },
         links:[
@@ -983,8 +988,12 @@ export const beVerbs ={
         means:{
             v:{
                 content:["是"],
-                example:["you are a boy."],
-                explain:["你是个男孩"]
+                example:[
+                    {
+                        sentences:["you are a boy."],
+                        explain:["你是个男孩"]
+                    }
+                ],
             }
         },
         links:[
@@ -1005,8 +1014,12 @@ export const beVerbs ={
         means:{
             v:{
                 content:["是"],
-                example:["thou art loosed."],
-                explain:["你被释放了"]
+                example:[
+                    {
+                        sentences:["thou art loosed."],
+                        explain:["你被释放了"]
+                    }
+                ],
             }
         },
         links:[
@@ -1028,8 +1041,12 @@ export const beVerbs ={
         means:{
             v:{
                 content:["是，有（be的过去分词），被，已"],
-                example:["His king had been checkmated."],
-                explain:["他的王棋已被将死。"]
+                example:[
+                    {
+                        sentences:["His king had been checkmated."],
+                        explain:["他的王棋已被将死。"],
+                    }
+                ],
             }
         },
         links:[
@@ -1051,8 +1068,13 @@ export const beVerbs ={
         means:{
             v:{
                 content:["是，有（be的现在分词），被，已"],
-                example:["Optimism being one of them."],
-                explain:["乐观就是其中之一。"]
+                example:[
+                    {
+                        sentences:["Optimism being one of them."],
+                        explain:["乐观就是其中之一。"]
+                    }
+                ],
+
             }
         },
         links:[
@@ -1074,8 +1096,12 @@ export const beVerbs ={
         means:{
             v:{
                 content:["是；在；要"],
-                example:["The thing,i was doing tonight."],
-                explain:["我今晚要做的事。"]
+                example:[
+                    {
+                        sentences:["The thing,i was doing tonight."],
+                        explain:["我今晚要做的事。"]
+                    }
+                ],
             }
         },
         links:[
@@ -1102,8 +1128,12 @@ export const beVerbs ={
         means:{
             v:{
                 content:["是；在；要；（are 的过去式）"],
-                example:["The kids were happy, the crowds were stoked."],
-                explain:["孩子们很高兴，周围的人也兴奋起来了。"]
+                example:[
+                    {
+                        sentences:["The kids were happy, the crowds were stoked."],
+                        explain:["孩子们很高兴，周围的人也兴奋起来了。"]
+                    }
+                ],
             }
         },
         links:[
@@ -1333,7 +1363,8 @@ export const wordClass ={
     n:{
         name:"n",
         type:"名词",
-        fullName:"noun",
+        fullName:"Noun",
+        means:'表达人，事物，地点的名称',
         children:[
             {
                 title:"可数名词",
@@ -1361,6 +1392,212 @@ export const wordClass ={
                     "水",
                     "天空",
                     "火"
+                ]
+            }
+        ]
+    },
+    art:{
+        name:"art",
+        type:"冠词",
+        fullName:"Article",
+        means:'用在名词前，帮助说明其所指对象',
+        children:[
+            {
+                title:"定冠词",
+                text:"definite article.",
+                example:[
+                    "the",
+                ],
+                explain:[
+                    "这",
+                ]
+            },
+            {
+                title:"不定冠词",
+                text:"indefinite article.",
+                example:[
+                    "one",
+                    "a",
+                    "an",
+                ],
+                explain:[
+                    "一个",
+                    "一个(用于在辅音音素开头的词前用)",
+                    "一个(用于在元音音素开头的词前用)",
+                ]
+            },
+        ]
+    },
+    pron:{
+        name:"pron",
+        type:"代词",
+        fullName:"Pronoun",
+        means:'代替名词，数词等',
+        children:[
+            {
+                title:"代词",
+                text:"pron.",
+                example:[
+                    "this",
+                    "that",
+                    "i"
+                ],
+                explain:[
+                    "这个",
+                    "那个",
+                    "我"
+                ]
+            }
+        ]
+    },
+    adj:{
+        name:"adjective",
+        type:"形容词",
+        fullName:"Adjective",
+        means:'表示人/事物的性质或特征',
+        children:[
+            {
+                title:"形容词",
+                text:"adj.",
+                example:[
+                    "blue",
+                    "big",
+                    "beautiful"
+                ],
+                explain:[
+                    "蓝色的",
+                    "大的",
+                    "美丽的"
+                ]
+            }
+        ]
+    },
+    num:{
+        name:"Numeral",
+        type:"数词",
+        fullName:"Numeral",
+        means:'表示数量或顺序',
+        children:[
+            {
+                title:"数词",
+                text:"num.",
+                example:[
+                    "first",
+                    "three",
+                ],
+                explain:[
+                    "第一",
+                    "3",
+                ]
+            }
+        ]
+    },
+    v:{
+        name:"v",
+        type:"动词",
+        fullName:"Verb",
+        means:'表示动作或状态的词',
+        children:[
+            {
+                title:"动词",
+                text:"v.",
+                example:[
+                    "play",
+                    "bit",
+                    "have"
+                ],
+                explain:[
+                    "玩",
+                    "咬",
+                    "喝"
+                ]
+            }
+        ]
+    },
+    adv:{
+        name:"adverb",
+        type:"副词",
+        fullName:"Adverb",
+        means:'表示动作的程度/特征',
+        children:[
+            {
+                title:"副词",
+                text:"adv.",
+                example:[
+                    "often",
+                    "usually",
+                    "completely"
+                ],
+                explain:[
+                    "时常",
+                    "常常地",
+                    "完全地"
+                ]
+            }
+        ]
+    },
+    perp:{
+        name:"preposition",
+        type:"介词",
+        fullName:"Preposition",
+        means:'表示名词，代词和其他词之间的关系',
+        children:[
+            {
+                title:"介词",
+                text:"prep.",
+                example:[
+                    "in",
+                    "on",
+                    "at"
+                ],
+                explain:[
+                    "在里面",
+                    "在上面",
+                    "在,处于什么状态"
+                ]
+            }
+        ]
+    },
+    conj:{
+        name:"conjunction",
+        type:"连词",
+        fullName:"Conjunction",
+        means:'连接词与词，句子与句子',
+        children:[
+            {
+                title:"连词",
+                text:"conj.",
+                example:[
+                    "and",
+                    "but",
+                    "that",
+                ],
+                explain:[
+                    "和",
+                    "但是",
+                    "...可能是"
+                ]
+            }
+        ]
+    },
+    int:{
+        name:"Interjection",
+        type:"感叹词",
+        fullName:"Interjection",
+        means:'表示说话时的喜悦，惊讶等情感或语气',
+        children:[
+            {
+                title:"感叹词",
+                text:"int.",
+                example:[
+                    "oh",
+                    "hello",
+                    "oops",
+                ],
+                explain:[
+                    "噢",
+                    "哈喽",
+                    "哎呀"
                 ]
             }
         ]

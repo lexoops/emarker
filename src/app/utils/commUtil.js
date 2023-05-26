@@ -27,4 +27,14 @@ export default class CommUtil {
 
     isNotLogin(){return !this.storeIns.state.user.isLogin};
 
+    setCopy(ref,text){
+        uni.setClipboardData({
+            showToast:false,
+            data:text,//要被复制的内容
+            success:()=>{//复制成功的回调函数
+                ref.uToast.show({ message: `复制成功~`,type: 'success',duration:500});
+            }
+        },true);
+    }
+
 }
