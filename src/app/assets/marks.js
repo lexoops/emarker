@@ -9,7 +9,7 @@ export const SoundMarks =[
     //长元音
     {
         dump:true,
-        title:"长元音"
+        title:"长元音",
     },
     {
         type:"vowel",
@@ -165,7 +165,7 @@ export const SoundMarks =[
     },
     {
         dump:true,
-        title:"清辅音"
+        title:"清辅音",
     },
 
     //清辅音
@@ -1604,3 +1604,136 @@ export const wordClass ={
     },
 
 };
+
+
+//可数名词的复数形式
+export const pluralWords =[
+    {
+        title:"规则变化",
+        rules:[
+            {
+                title:"在词尾加s",
+                example:[
+                    {
+                        word:'eraser',
+                        mean:'橡皮擦',
+                        plural:"erasers"
+                    }
+                ],
+                parts:[
+                    {
+                        title:'清辅音后读[s]。',
+                        sound:require( '../../static/mp3/s.mp3'),
+                    },
+                    {
+                        title:'其它都读[z]。',
+                        sound:require( '../../static/mp3/z.mp3'),
+                    },
+                    {
+                        title:'t后读[ts]。',
+                        sound:require( '../../static/mp3/ts.mp3'),
+                    },
+                    {
+                        title:'d后读[dz]。',
+                        sound:require( '../../static/mp3/dz.mp3'),
+                    },
+                ]
+            },
+            {
+                title:"词尾为s，x，sh，ch或“辅音 + o”的词，要加es。",
+                example:[
+                    {
+                        word:'couch',
+                        mean:'沙发',
+                        plural:"couches"
+                    }
+                ],
+                parts:[
+                    {
+                        title:'读[iz]。',
+                        sound:require( '../../static/mp3/iz.mp3'),
+                    },
+                ]
+            },
+            {
+                title:"词尾是“辅音 + y”的词，把y改成i，再加es。",
+                example:[
+                    {
+                        word:'lady',
+                        mean:'女士',
+                        plural:"ladies"
+                    }
+                ],
+                parts:[
+                    {
+                        title:'读[iz]。',
+                        sound:require( '../../static/mp3/iz.mp3'),
+                    },
+                ]
+            },
+            {
+                title:"词尾是f，fe的字，要把f，fe改成v，再加es。",
+                example:[
+                    {
+                        word:'leaf',
+                        mean:'叶子',
+                        plural:"leaves"
+                    },
+                    {
+                        word:'knife',
+                        mean:'刀子',
+                        plural:"knives"
+                    }
+                ],
+                parts:[
+                    {
+                        title:'读[vz]。',
+                        sound:require( '../../static/mp3/vz.mp3'),
+                    },
+                ]
+            },
+        ]
+    },
+    {
+        title:"不规则变化",
+        rules:[
+            {
+                title:"单复数形式完全不同的。",
+                example:[
+                    {
+                        word:'woman',
+                        mean:'女人',
+                        plural:"women"
+                    },
+                    {
+                        word:'child',
+                        mean:'孩子',
+                        plural:"children"
+                    }
+                ],
+                parts:[
+                    {
+                        title:'其它都读[z]。',
+                        sound:require( '../../static/mp3/z.mp3'),
+                    },
+                ]
+            },
+            {
+                title:"单复数同形的词。",
+                example:[
+                    {
+                        word:'fish',
+                        mean:'鱼',
+                        plural:"fish"
+                    },
+                ],
+                parts:[
+                    {
+                        title:'其它都读[z]。',
+                        sound:require( '../../static/mp3/z.mp3'),
+                    },
+                ]
+            }
+        ]
+    }
+];

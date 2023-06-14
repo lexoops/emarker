@@ -50,6 +50,9 @@
 				},
 				{
 					"path": "posIntro/index"
+				},
+				{
+					"path": "plural/index"
 				}
 			]
 		}

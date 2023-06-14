@@ -9,7 +9,7 @@
         <view class="flex1 flex-column flex-align-center">
             <view class="flex-center">
                 <view class="flex-center border-ddd-1 overflow-hidden" style="width: 400rpx;height:360rpx;margin-top: 100rpx;padding-top: 60rpx;border-radius: 6px">
-                    <canvas canvas-id="qrcode" style="width: 360rpx;height:420rpx;margin: 0 auto;" class="flex-center"/>
+                    <canvas canvas-id="qrcode" style="width: 360rpx;height:420rpx;margin: 0 auto;" class="flex-center" width="360rpx" height="420rpx"/>
                 </view>
             </view>
             <view style="height: 100rpx"/>
@@ -46,7 +46,7 @@
                     canvasId: 'qrcode',
                     componentInstance: this,
                     text: JSON.stringify(""),
-                    size: 180,
+                    size: uni.upx2px(360),
                     margin: 0,
                     backgroundColor: '#31696A',
                     foregroundColor: '#ffffff',
@@ -59,6 +59,5 @@
     }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
 </style>

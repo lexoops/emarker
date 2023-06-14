@@ -28,10 +28,10 @@
                 <view v-for="(item,index) in soundMarks">
                     <view v-if="item.dump" class="min-64 pad-left20 flex-align-center mar-top20 mar-bottom5 space-between flex-row holder">
                         <text class="font-fff font-26">{{item.title}}</text>
-                        <view class="flex-row flex-center" @click="()=>{$easyUni.uniNavigate.navigateTo('/app/pages/detail/pick/index')}">
+                    <!--    <view class="flex-row flex-center" @click="()=>{$easyUni.uniNavigate.navigateTo('/app/pages/detail/pick/index')}">
                             <text class="font-26" style="color: #769EA0">查看详解</text>
                             <u-icon name="arrow-right" size="26"/>
-                        </view>
+                        </view>-->
                     </view>
                     <view v-else class="bg-light-primary mark-container flex-center box-shadow-3-light"
                           @click="()=>{playMarks(item)}">
@@ -81,6 +81,28 @@
                             <text class="font-fff bold">I</text>
                         </template>
                     </ItemContainer>
+                    <ItemContainer title="读法卡片" icon="weixin-fill"
+                                   useArrow
+                                   class="bg-primary"
+                                   :show-bottom-line="false"
+                                   bg-color="#397072"
+                                   use-cust-icon
+                                   @click="()=>{$easyUni.uniNavigate.navigateTo('/app/pages/detail/pick/index')}">
+                        <template #custIcon>
+                            <text class="font-fff bold">Sc</text>
+                        </template>
+                    </ItemContainer>
+             <!--       <ItemContainer title="复数变化" icon="weixin-fill"
+                                   useArrow
+                                   class="bg-light-primary"
+                                   :show-bottom-line="false"
+                                   bg-color="#31696A"
+                                   use-cust-icon
+                                   @click="()=>{$easyUni.uniNavigate.navigateTo('/app/pages/study/plural/index')}">
+                        <template #custIcon>
+                            <text class="font-fff bold">Sz</text>
+                        </template>
+                    </ItemContainer>-->
                 </view>
                 <ItemContainer title="捐赠我们" icon="rmb-circle-fill"
                                useArrow
@@ -126,7 +148,7 @@
         },
 
         mounted() {
-            console.info(this.soundMarks)
+
         },
         methods:{
             playMarks(item){
